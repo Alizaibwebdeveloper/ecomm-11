@@ -8,6 +8,6 @@
     <form action="{{route('logout')}}" method="post" id="logout-form">
         @csrf
     <a href="login.html" class="menu-link menu-link_us-s" onclick="event.preventDefault();document.getElementById('logout-form').submit();" >Logout</a>
-</form>
+    </form>
 </li>
   </ul>
