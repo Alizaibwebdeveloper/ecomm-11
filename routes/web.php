@@ -27,6 +27,8 @@ Route::middleware(['auth'])->group(function(){
 
 Route::middleware(['auth', AuthAdmin::class])->group(function(){
     Route::get('/account_admin', [AdminController::class,'index'])->name('admin.index');
+    Route::get('/admin/brands',[AdminController::class,'brands'])->name('admin.brand');
+
 });
 
 require __DIR__.'/auth.php';
