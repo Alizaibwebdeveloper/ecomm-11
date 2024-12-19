@@ -26,6 +26,9 @@ return [
     |
     */
 
+  
+
+
     'env' => env('APP_ENV', 'production'),
 
     /*
@@ -105,6 +108,10 @@ return [
         ),
     ],
 
+   
+
+
+
     /*
     |--------------------------------------------------------------------------
     | Maintenance Mode Driver
@@ -121,6 +128,10 @@ return [
     'maintenance' => [
         'driver' => env('APP_MAINTENANCE_DRIVER', 'file'),
         'store' => env('APP_MAINTENANCE_STORE', 'database'),
-    ],
+    ], 
+
+
+ 
+
 
 ];
