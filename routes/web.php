@@ -32,6 +32,18 @@ Route::middleware(['auth', AuthAdmin::class])->group(function(){
     Route::get('admin/add/brand',[AdminController::class,'brand_add'])->name('admin.brand.add');
 
     Route::post('admin/brand/store', [AdminController::class,'brand_store'])->name('admin.brand.store');
+
+    Route::get('/admin/brands/edit/{id}', [AdminController::class, 'brand_edit'])->name('admin.brand.edit');
+
+    Route::post('/admin/brands/update/{id}', [AdminController::class, 'brand_update'])->name('admin.brand.update');
+
+    Route::get('/admin/brands/delete/{id}', [AdminController::class, 'brand_delete'])->name('admin.brand.delete');
+
+    Route::get('/admin/categories',[AdminController::class,'categories'])->name('admin.categories');
+
+    Route::get('admin/add/category',[AdminController::class,'category_add'])->name('admin.category.add');
+
+    Route::post('admin/category/store', [AdminController::class,'category_store'])->name('admin.category.store');
 });
 
 require __DIR__.'/auth.php';
